@@ -1,0 +1,14 @@
+C:\Users\jshoup\Documents\Visual Studio 2015\Projects\TigerStopSDKTest\TigerStopSDKTest\bin\Debug\TigerStopSDKExample.exe.config
+C:\Users\jshoup\Documents\Visual Studio 2015\Projects\TigerStopSDKTest\TigerStopSDKTest\bin\Debug\TigerStopSDKExample.exe
+C:\Users\jshoup\Documents\Visual Studio 2015\Projects\TigerStopSDKTest\TigerStopSDKTest\bin\Debug\TigerStopSDKExample.pdb
+C:\Users\jshoup\Documents\Visual Studio 2015\Projects\TigerStopSDKTest\TigerStopSDKTest\bin\Debug\TigerStopAPI.dll
+C:\Users\jshoup\Documents\Visual Studio 2015\Projects\TigerStopSDKTest\TigerStopSDKTest\bin\Debug\TigerStopAPI.pdb
+C:\Users\jshoup\Documents\Visual Studio 2015\Projects\TigerStopSDKTest\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.csprojResolveAssemblyReference.cache
+C:\Users\jshoup\Documents\Visual Studio 2015\Projects\TigerStopSDKTest\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.exe
+C:\Users\jshoup\Documents\Visual Studio 2015\Projects\TigerStopSDKTest\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.pdb
+C:\Users\jshoup\Documents\TigerStopSDKExample\TigerStopSDKTest\bin\Debug\TigerStopSDKExample.exe.config
+C:\Users\jshoup\Documents\TigerStopSDKExample\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.exe
+C:\Users\jshoup\Documents\TigerStopSDKExample\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.pdb
+C:\Users\jshoup\Documents\OpenSource Gits\SDKExGit\TigerStopSDKExample\TigerStopSDKTest\bin\Debug\TigerStopSDKExample.exe.config
+C:\Users\jshoup\Documents\OpenSource Gits\SDKExGit\TigerStopSDKExample\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.exe
+C:\Users\jshoup\Documents\OpenSource Gits\SDKExGit\TigerStopSDKExample\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.pdb
