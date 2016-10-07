@@ -892,7 +892,7 @@ namespace TigerStopSDKExample
         /// <summary>
         /// Returns the current position of the machine.
         /// </summary>
-        /// <returns name="pos"> A 'double' that represents the returned current position from the machine or '0.00' if no response is received in an expected time frame. </returns>
+        /// <returns name="pos"> A 'double' that represents the returned current position from the machine or 'NaN' if no response is received in an expected time frame. </returns>
         public double GetPosition()
         {
             double pos = 0.00;
@@ -907,7 +907,7 @@ namespace TigerStopSDKExample
             }
             else
             {
-                pos = 0.00;
+                pos = double.NaN;
             }
 
             return pos;
@@ -918,7 +918,7 @@ namespace TigerStopSDKExample
         /// Returns the current position of the machine, waiting for the duration of 'timeout' for a response.
         /// </summary>
         /// <param name="timeout"> An 'int' that representing the desired timeout value in milliseconds the function will wait for a response. </param>
-        /// <returns name="pos"> A 'double' that represents the returned current position from the machine or '0.00' if no response is received in the expected time frame of 'timeout'. </returns>
+        /// <returns name="pos"> A 'double' that represents the returned current position from the machine or 'NaN' if no response is received in the expected time frame of 'timeout'. </returns>
         public double GetPosition(int timeout)
         {
             double pos = 0.00;
@@ -933,7 +933,7 @@ namespace TigerStopSDKExample
             }
             else
             {
-                pos = 0.00;
+                pos = double.NaN;
             }
 
             return pos;
