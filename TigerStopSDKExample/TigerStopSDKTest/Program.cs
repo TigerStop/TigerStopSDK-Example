@@ -329,6 +329,8 @@ namespace TigerStopSDKExample
                 case "HM":
                     io.HomeDevice();
 
+                    Console.WriteLine("Home Complete");
+
                     exit = false;
                     
                     break;
