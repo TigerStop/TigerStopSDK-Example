@@ -487,7 +487,7 @@ namespace TigerStopSDKExample
         private void HandleAck()
         {
             // If there isn't any kind of 'NACK' in the message, we have to treat it as a legitimate message.
-            if (!string.Join("", readBuffer.ToArray()).Contains("NACK"))
+            if (string.Join("", readBuffer.ToArray()).Contains("NACK"))
             {
                 if (!isScanning)
                 {
@@ -625,6 +625,9 @@ namespace TigerStopSDKExample
             }
             else
             {
+                // Clear the NACK from the buffer.
+                readBuffer.Clear();
+
                 RetryCommand();
             }
         }
