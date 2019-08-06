@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using TigerStopAPI;
 
 namespace TigerStopSDKExample
 {
     class Program
     {
-        static TigerStop_IO io;
+        static TigerStopAPI.TigerStop_IO io;
 
         static void Main(string[] args)
         {
@@ -33,7 +34,7 @@ namespace TigerStopSDKExample
 
                         Console.WriteLine("Connecting to " + comport + "....");
 
-                        io = new TigerStop_IO(baud, comport);
+                        io = new TigerStopAPI.TigerStop_IO(comport, baud);
 
                         if (io.IsOpen)
                         {
@@ -50,7 +51,7 @@ namespace TigerStopSDKExample
                         Console.WriteLine("Searching....");
 
                         List<KeyValuePair<string, int>> con = new List<KeyValuePair<string, int>>();
-                        con = TigerStop_IO.Connections();
+                        con = TigerStopAPI.TigerStop_IO.Connections();
 
                         if (con.Count > 0)
                         {
