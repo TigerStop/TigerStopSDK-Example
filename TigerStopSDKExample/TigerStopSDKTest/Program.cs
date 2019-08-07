@@ -171,6 +171,9 @@ namespace TigerStopSDKExample
                                       "Home : Homes the machine, returning to the home position.\n" +
                                       " - Home | home | HOME | hm | HM \n" +
                                       "\n" +
+                                      "Min-max : Finds end sensors to determine working length.\n" +
+                                      " - FEL | fel | MIN-MAX | min-max | MINMAX | minmax | mm | MM \n" +
+                                      "\n" +
                                       "Sleep : Sets the drive to sleep.\n" +
                                       " - Sleep | sleep | SLEEP | sl | SL \n" +
                                       "\n" +
@@ -337,6 +340,10 @@ namespace TigerStopSDKExample
                     break;
                 case "FEL":
                 case "fel":
+                case "Fel":
+                case "Minmax":
+                case "Min-Max":
+                case "Min-max":
                 case "minmax":
                 case "min-max":
                 case "MINMAX":
