@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using TigerStopAPI;
 
 namespace TigerStopSDKExample
 {
     class Program
     {
-        static TigerStop_IO io;
+        static TigerStopAPI.TigerStop_IO io;
 
         static void Main(string[] args)
         {
@@ -33,7 +34,7 @@ namespace TigerStopSDKExample
 
                         Console.WriteLine("Connecting to " + comport + "....");
 
-                        io = new TigerStop_IO(baud, comport);
+                        io = new TigerStopAPI.TigerStop_IO(comport, baud);
 
                         if (io.IsOpen)
                         {
@@ -50,7 +51,7 @@ namespace TigerStopSDKExample
                         Console.WriteLine("Searching....");
 
                         List<KeyValuePair<string, int>> con = new List<KeyValuePair<string, int>>();
-                        con = TigerStop_IO.Connections();
+                        con = TigerStopAPI.TigerStop_IO.Connections();
 
                         if (con.Count > 0)
                         {
@@ -169,6 +170,9 @@ namespace TigerStopSDKExample
                                       "\n" +
                                       "Home : Homes the machine, returning to the home position.\n" +
                                       " - Home | home | HOME | hm | HM \n" +
+                                      "\n" +
+                                      "Min-max : Finds end sensors to determine working length.\n" +
+                                      " - FEL | fel | MIN-MAX | min-max | MINMAX | minmax | mm | MM \n" +
                                       "\n" +
                                       "Sleep : Sets the drive to sleep.\n" +
                                       " - Sleep | sleep | SLEEP | sl | SL \n" +
@@ -333,6 +337,25 @@ namespace TigerStopSDKExample
 
                     exit = false;
                     
+                    break;
+                case "FEL":
+                case "fel":
+                case "Fel":
+                case "Minmax":
+                case "Min-Max":
+                case "Min-max":
+                case "minmax":
+                case "min-max":
+                case "MINMAX":
+                case "MIN-MAX":
+                case "mm":
+                case "MM":
+                    io.FindEndLimits();
+
+                    Console.WriteLine("Min-max complete");
+
+                    exit = false;
+
                     break;
                 case "Sleep":
                 case "SLEEP":

@@ -16,3 +16,13 @@ C:\Users\jshoup\Documents\OpenSource Gits\SDKExGit\TigerStopSDKExample\TigerStop
 C:\Users\jshoup\Documents\OpenSource Gits\SDKExGit\TigerStopSDKExample\TigerStopSDKTest\bin\Debug\TigerStopSDKExample.pdb
 C:\Users\jshoup\Documents\OpenSource Gits\SDKExGit\TigerStopSDKExample\TigerStopSDKTest\bin\Debug\TigerStopAPI.pdb
 C:\Users\jshoup\Documents\OpenSource Gits\SDKExGit\TigerStopSDKExample\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.csprojResolveAssemblyReference.cache
+C:\Users\ckoch\Source\Repos\TigerStopSDK-Example\TigerStopSDKExample\TigerStopSDKTest\bin\Debug\TigerStopSDKExample.exe.config
+C:\Users\ckoch\Source\Repos\TigerStopSDK-Example\TigerStopSDKExample\TigerStopSDKTest\bin\Debug\TigerStopSDKExample.exe
+C:\Users\ckoch\Source\Repos\TigerStopSDK-Example\TigerStopSDKExample\TigerStopSDKTest\bin\Debug\TigerStopSDKExample.pdb
+C:\Users\ckoch\Source\Repos\TigerStopSDK-Example\TigerStopSDKExample\TigerStopSDKTest\bin\Debug\TigerStopAPI.dll
+C:\Users\ckoch\Source\Repos\TigerStopSDK-Example\TigerStopSDKExample\TigerStopSDKTest\bin\Debug\TigerStopAPI.pdb
+C:\Users\ckoch\Source\Repos\TigerStopSDK-Example\TigerStopSDKExample\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.csprojAssemblyReference.cache
+C:\Users\ckoch\Source\Repos\TigerStopSDK-Example\TigerStopSDKExample\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.csproj.CoreCompileInputs.cache
+C:\Users\ckoch\Source\Repos\TigerStopSDK-Example\TigerStopSDKExample\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.csproj.CopyComplete
+C:\Users\ckoch\Source\Repos\TigerStopSDK-Example\TigerStopSDKExample\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.exe
+C:\Users\ckoch\Source\Repos\TigerStopSDK-Example\TigerStopSDKExample\TigerStopSDKTest\obj\Debug\TigerStopSDKExample.pdb
