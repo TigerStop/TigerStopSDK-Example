@@ -335,6 +335,21 @@ namespace TigerStopSDKExample
                     exit = false;
                     
                     break;
+                case "FEL":
+                case "fel":
+                case "minmax":
+                case "min-max":
+                case "MINMAX":
+                case "MIN-MAX":
+                case "mm":
+                case "MM":
+                    io.FindEndLimits();
+
+                    Console.WriteLine("Min-max complete");
+
+                    exit = false;
+
+                    break;
                 case "Sleep":
                 case "SLEEP":
                 case "sleep":

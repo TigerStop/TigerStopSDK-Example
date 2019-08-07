@@ -45,15 +45,13 @@
     <Reference Include="System.Xml" />
     <Reference Include="TigerStopAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\TigerStopAPI\TigerStopAPI\bin\Release\TigerStopAPI.dll</HintPath>
+      <HintPath>..\..\..\TigerStopSDK\TigerStopAPI\TigerStopAPI\bin\Release\TigerStopAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MessageEvent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TigerStop_Com.cs" />
-    <Compile Include="TigerStop_IO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
