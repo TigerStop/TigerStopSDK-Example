@@ -566,6 +566,22 @@ namespace TigerStopSDKExample
             return settingValue;
         }
 
+        // --- public string GetSetting(int settingIndex) ---
+        /// <summary>
+        /// Returns the value of a desired setting at 'settingIndex'.
+        /// </summary>
+        /// <param name="settingIndex"> An 'int' that relates to the index of the desired setting to retrieve. </param>
+        /// <returns name="settingValue"> A 'string' containing the value of the setting at 'settingIndex' or 'null' if a response wasn't received in an expected time frame. </returns>
+        public void GetAllSettings()
+        {
+            GetSettings();
+
+            for(int i = 0; i < settingNames.Count; i++)
+            {
+                Console.WriteLine(settingNames[i] + " = " + Settings[i]);
+            }
+        }
+
         // --- public void Stop() ---
         /// <summary>
         /// Sends a stop command to the machine, ending any action its currently in the middle of.

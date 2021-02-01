@@ -296,7 +296,7 @@ namespace TigerStopSDKExample
                 case "sett":
                 case "st":
                 case "ST":
-                    // A quick check of the first character in the second argument will determine if a setting name was sent or a setting index.
+                    //A quick check of the first character in the second argument will determine if a setting name was sent or a setting index.
                     // If a setting index, a digit, was found then GetSetting() can be called immediately.
                     if (char.IsDigit(input[1], 0))
                     {
