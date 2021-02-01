@@ -423,6 +423,47 @@ namespace TigerStopSDKExample
                     exit = false;
 
                     break;
+                case "measure":
+                case "MEASURE":
+                case "msr":
+                case "MSR":
+                    double length = io.RandomLengthMeasure();
+
+                    if (length > -1)
+                    {
+                        Console.WriteLine("Measured: " + length);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Unable to measure length.");
+                    }
+
+                    exit = false;
+
+                    break;
+                case "scan":
+                case "SCAN":
+                case "sc":
+                case "SC":
+                    List<double> marks = io.ScanDefectedLength();
+
+                    if (marks.Count > 0)
+                    {
+                        foreach (double m in marks)
+                        {
+                            Console.WriteLine("Mark seen at: " + m);
+                        }
+
+                        Console.WriteLine("Length of material: " + marks[marks.Count - 1]);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Unable to scan material.");
+                    }
+
+                    exit = false;
+
+                    break;
                 default:
                     Console.WriteLine("Invalid Command.\nType 'help' or 'h' to view list of available commands.\n");
                     exit = false;

@@ -64,6 +64,8 @@ namespace TigerStopSDKExample
         private bool isDmOn = false;
         //  -  SCAN
         private bool isScanning = false;
+        //  -  MEASURE
+        private bool isMeasuring = false;
 
         //  =  =  =  LISTS  =  =  =
         private List<DateTime> ackTimes = new List<DateTime>();
@@ -558,6 +560,26 @@ namespace TigerStopSDKExample
 
                         SendCommand();
                     }
+                    // Is performing random length measurement.
+                    else if (isMeasuring)
+                    {
+                        //We received a 'TMF' ack, pass the ack and length along.
+                        if (string.Join("", readBuffer.ToArray()).Contains("TMF"))
+                        {
+                            lastAck.Acknowledgement = "TMF";
+                            lastAck.TimeRecieved = DateTime.Now;
+
+                            SendData(this, new MessageEvent(string.Join("", readBuffer.ToArray())));
+
+                            isMeasuring = false;
+                        }
+
+                        readBuffer.Clear();
+
+                        ClearCommand(false);
+
+                        SendCommand();
+                    }
                     // Is homing the device.
                     else if (isHoming)
                     {
@@ -610,7 +632,7 @@ namespace TigerStopSDKExample
                     lastAck.Acknowledgement = string.Join("", readBuffer.ToArray());
                     lastAck.TimeRecieved = DateTime.Now;
 
-                    SendData(this, new MessageEvent(string.Join(",", scanMarks.ToArray())));
+                    SendData(this, new MessageEvent(string.Join(";", scanMarks.ToArray())));
 
                     scanMarks.Clear();
 
@@ -668,6 +690,44 @@ namespace TigerStopSDKExample
             else
             {
                 writeBuffer.Add(cmd);
+                SendCommand();
+            }
+        }
+
+        // --- protected void QueueCommand(string command) ---
+        /// <summary>
+        /// This function is the main interface between the rest of the system and the machine. Any commands that need to be sent to the machine runs through this command.
+        /// It takes a 'byte[]' command to send to the machine. If the system already has commands queued up, it will add the command to the queue, otherwise it will call 
+        /// SendCommand() to get the command processed immediately.
+        /// </summary>
+        /// <param name="command"> A 'byte[]' command that will be sent to the machine. </param>
+        protected void QueueCommand(byte[] command)
+        {
+            if (command.SequenceEqual(moveStopCommand))
+            {
+                WriteToSerial(moveStopCommand);
+                ClearCommand(true);
+
+                ChangeFlags(false);
+
+                ClearPort();
+            }
+            else if (command.SequenceEqual(moveEStopCommand))
+            {
+                WriteToSerial(moveEStopCommand);
+                ClearCommand(true);
+
+                ChangeFlags(false);
+
+                ClearPort();
+            }
+            else if (writeBuffer.Count != 0)
+            {
+                writeBuffer.Add(command);
+            }
+            else
+            {
+                writeBuffer.Add(command);
                 SendCommand();
             }
         }
